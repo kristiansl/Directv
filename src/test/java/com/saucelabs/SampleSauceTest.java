@@ -168,24 +168,21 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider {
     @Test
     public void loginTest() throws Exception {
         driver.get("http://www.directv.com/");
-        WebDriverWait wait = new WebDriverWait(driver, 10); // wait for a maximum of 5 seconds
-        WebElement womenTab = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#mod_147539_2_list")));
-        womenTab.click();
-       // Thread.sleep(5000);
-       // driver.findElement(By.xpath("//a[@title = 'View all packages']")).click();
-        //driver.findElement(By.cssSelector("#mod_147539_2_list")).click();
+        WebDriverWait wait = new WebDriverWait(driver, 10); // wait for a maximum of 10 seconds
+        WebElement searchTab = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#mod_147539_2_list")));
+        searchTab.click();
         driver.findElement(By.linkText("View all packages")).click();
-        WebDriverWait wait2 = new WebDriverWait(driver, 10); // wait for a maximum of 5 seconds
+        WebDriverWait wait2 = new WebDriverWait(driver, 10); // wait for a maximum of 10 seconds
         WebElement zipcodeTab = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#zipCode")));
         zipcodeTab.click();       
-
         Thread.sleep(5000);
         driver.findElement(By.id("zipCode")).sendKeys("94102");
         driver.findElement(By.id("zipcodeBtn")).click();
         Thread.sleep(5000);
 
-      
- 
+        // Thread.sleep(5000);
+        // driver.findElement(By.xpath("//a[@title = 'View all packages']")).click();
+        // driver.findElement(By.cssSelector("#mod_147539_2_list")).click();
     }
 
     /**
