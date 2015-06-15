@@ -107,17 +107,16 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider {
     @ConcurrentParameterized.Parameters
     public static LinkedList browsersStrings() {
         LinkedList browsers = new LinkedList();
+        browsers.add(new String[]{"Windows 8.1", "dev", "chrome", "Windows 8.1 Chrome Dev"}); 
+        browsers.add(new String[]{"Windows 7", "10", "internet explorer", "Windows 7 IE 10"});   
+        browsers.add(new String[]{"Windows XP", "42", "chrome", "Windows XP Chrome 42"});   
+        browsers.add(new String[]{"Windows XP", "36", "firefox", "Windows 8 Firefox 36"});      
+        browsers.add(new String[]{"OSX 10.8", "6", "safari", "Mac 10.8 Safari 6"});
+        browsers.add(new String[]{"OSX 10.10", "8.2", "iPhone", "iPhone Emulator 8.2"});
         browsers.add(new String[]{"Windows 8.1", "11", "internet explorer", "Windows 8.1 IE 11"}); 
-       // browsers.add(new String[]{"Windows 7", "10", "internet explorer", "Windows 7 IE 10"});   
-       // browsers.add(new String[]{"Windows XP", "42", "chrome", "Windows XP Chrome 42"});   
-       // browsers.add(new String[]{"Windows XP", "36", "firefox", "Windows 8 Firefox 36"});      
-       // browsers.add(new String[]{"OSX 10.8", "6", "safari", "Mac 10.8 Safari 6"});
-       // browsers.add(new String[]{"Linux", "4.4", "Android", "Android Emulator 4.4"}); 
-       // browsers.add(new String[]{"OSX 10.10", "8.2", "iPhone", "iPhone Emulator 8.2"});
-       // browsers.add(new String[]{"Windows 8.1", "11", "internet explorer", "Windows 8.1 IE 11"}); 
-       // browsers.add(new String[]{"Windows 7", "10", "internet explorer", "Windows 7 IE 10"});   
-       // browsers.add(new String[]{"Windows XP", "42", "chrome", "Windows XP Chrome 42"});   
-       // browsers.add(new String[]{"Windows 8", "36", "firefox", "Windows 8 Firefox 36"});
+        browsers.add(new String[]{"Windows 7", "10", "internet explorer", "Windows 7 IE 10"});   
+        browsers.add(new String[]{"Windows XP", "40", "chrome", "Windows XP Chrome 40"});   
+        browsers.add(new String[]{"Windows 8", "36", "firefox", "Windows 8 Firefox 36"});
  
         return browsers;
     }
@@ -169,10 +168,10 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider {
         Thread.sleep(5000);
        // driver.findElement(By.xpath("//a[@title = 'View all packages']")).click();
         driver.findElement(By.cssSelector(".dtv-reliability-list .link a")).click();
-        //Thread.sleep(5000);
-        //driver.findElement(By.id("zipCode")).sendKeys("94102");
-       // driver.findElement(By.id("zipcodeBtn")).click();
-      //  Thread.sleep(5000);
+        Thread.sleep(5000);
+        driver.findElement(By.id("zipCode")).sendKeys("94102");
+        driver.findElement(By.id("zipcodeBtn")).click();
+        Thread.sleep(5000);
 
       
  
