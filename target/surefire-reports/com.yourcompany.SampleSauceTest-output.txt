@@ -1,0 +1,2 @@
+SauceOnDemandSessionID=b73d6b8369b84fc2aed08df6807d69a0 job-name=com.yourcompany.SampleSauceTest.loginTest[0]
+Job link: https://saucelabs.com/jobs/b73d6b8369b84fc2aed08df6807d69a0?auth=941efdbc98cda2fd575a61347f890907
