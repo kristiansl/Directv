@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -107,20 +108,22 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider {
     @ConcurrentParameterized.Parameters
     public static LinkedList browsersStrings() {
         LinkedList browsers = new LinkedList();
-        browsers.add(new String[]{"Windows 8.1", "dev", "chrome", "Windows 8.1 Chrome Dev"}); 
+        browsers.add(new String[]{"Windows 8.1", "11", "internet explorer", "Windows 8.1 IE 11"}); 
         browsers.add(new String[]{"Windows 7", "10", "internet explorer", "Windows 7 IE 10"});   
         browsers.add(new String[]{"Windows XP", "42", "chrome", "Windows XP Chrome 42"});   
         browsers.add(new String[]{"Windows XP", "36", "firefox", "Windows 8 Firefox 36"});      
         browsers.add(new String[]{"OSX 10.8", "6", "safari", "Mac 10.8 Safari 6"});
-        browsers.add(new String[]{"OSX 10.10", "8.2", "iPhone", "iPhone Emulator 8.2"});
-        browsers.add(new String[]{"Windows 8.1", "11", "internet explorer", "Windows 8.1 IE 11"}); 
-        browsers.add(new String[]{"Windows 7", "10", "internet explorer", "Windows 7 IE 10"});   
-        browsers.add(new String[]{"Windows XP", "40", "chrome", "Windows XP Chrome 40"});   
-        browsers.add(new String[]{"Windows 8", "36", "firefox", "Windows 8 Firefox 36"});
+        browsers.add(new String[]{"OSX 10.10", "8", "safari", "Mac 10.10 Safari 8"});
+        browsers.add(new String[]{"OSX 10.10", "40", "chrome", "Mac 10.10 Chrome 40"});
+        browsers.add(new String[]{"Windows 8.1", "beta", "chrome", "Windows 8.1 Chrome Beta"}); 
+        browsers.add(new String[]{"Windows 7", "9", "internet explorer", "Windows 7 IE 9"});   
+        browsers.add(new String[]{"Windows XP", "38", "firefox", "Windows XP Firefox 38"});   
+        //browsers.add(new String[]{"Linux", "4.4", "Android", "Android Emulator 4.4"}); 
+        //browsers.add(new String[]{"OSX 10.10", "8.2", "iPhone", "iPhone Emulator 8.2"});
  
         return browsers;
     }
-
+ 
      
     /** 
      * Constructs a new {@link RemoteWebDriver} instance which is configured to use the capabilities defined by the {@link #browser},
@@ -165,9 +168,17 @@ public class SampleSauceTest implements SauceOnDemandSessionIdProvider {
     @Test
     public void loginTest() throws Exception {
         driver.get("http://www.directv.com/");
-        Thread.sleep(5000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // wait for a maximum of 5 seconds
+        WebElement womenTab = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#mod_147539_2_list")));
+        womenTab.click();
+       // Thread.sleep(5000);
        // driver.findElement(By.xpath("//a[@title = 'View all packages']")).click();
-        driver.findElement(By.cssSelector(".dtv-reliability-list .link a")).click();
+        //driver.findElement(By.cssSelector("#mod_147539_2_list")).click();
+        driver.findElement(By.linkText("View all packages")).click();
+        WebDriverWait wait2 = new WebDriverWait(driver, 10); // wait for a maximum of 5 seconds
+        WebElement zipcodeTab = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#zipCode")));
+        zipcodeTab.click();       
+
         Thread.sleep(5000);
         driver.findElement(By.id("zipCode")).sendKeys("94102");
         driver.findElement(By.id("zipcodeBtn")).click();
