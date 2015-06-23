@@ -1,4 +1,82 @@
 -------------------------------------------------------------------------------
 Test set: com.yourcompany.SampleSauceTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1,309.302 sec
+Tests run: 10, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 599.502 sec <<< FAILURE!
+loginTest[1](com.yourcompany.SampleSauceTest)  Time elapsed: 0.003 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>ERROR: The requested URL could not be retrieved</title><style type="text/css"><!--  Internal Error: Missing Template MGR_INDEXbody:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }:lang(he) { direction: rtl; } --></style><meta http-equiv="refresh" content="0; url=http://www.flyfi.com/global/errors/no-coverage.htm"/><style type="text/css"><!-- html body {font-size: 0pt; color: #ffffff; background: #ffffff;} hr { display: none; } #titles { background: #ffffff; color: #ffffff; } h1 { font-size: 0pt; color: #ffffff; } h2 { font-size: 0pt; color: #ffffff; } #footer { font-size: 0pt; color: #ffffff; } a { color: #ffffff; font-size: 0pt; } p { color: #ffffff; font-size: 0pt; } --></style></head><body id=ERR_ZERO_SIZE_OBJECT><div id="titles"><h1>ERROR</h1><h2>The requested URL could not be retrieved</h2></div><hr><div id="content"><p>The following error was encountered while trying to retrieve the URL: <a href="http://ondemand.saucelabs.com/wd/hub/session/87ea3bec2e4b4861a5e3dfebfb3b24ec/url">http://ondemand.saucelabs.com/wd/hub/session/87ea3bec2e4b4861a5e3dfebfb3b24ec/url</a></p><blockquote id="error"><p><b>Zero Sized Reply</b></p></blockquote><p>Squid did not receive any data for this request.</p><p>Your cache administrator is <a href="mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_ZERO_SIZE_OBJECT&amp;body=CacheHost%3A%203%0D%0AErrPage%3A%20ERR_ZERO_SIZE_OBJECT%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Tue,%2016%20Jun%202015%2022%3A52%3A03%20GMT%0D%0A%0D%0AClientIP%3A%20172.27.6.112%0D%0AServerIP%3A%20ondemand.saucelabs.com%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fwd%2Fhub%2Fsession%2F87ea3bec2e4b4861a5e3dfebfb3b24ec%2Furl%20HTTP%2F1.1%0AContent-Type%3A%20application%2Fjson%3B%20charset%3Dutf-8%0D%0AContent-Length%3A%2033%0D%0AHost%3A%20ondemand.saucelabs.com%3A80%0D%0AConnection%3A%20Keep-Alive%0D%0AUser-Agent%3A%20Apache-HttpClient%2F4.3.6%20(java%201.5)%0D%0AAccept-Encoding%3A%20gzip,deflate%0D%0A%0D%0A%0D%0A">webmaster</a>.</p><br></div><hr><div id="footer"><p>Generated Tue, 16 Jun 2015 22:52:03 GMT by 3 (squid)</p><!-- ERR_ZERO_SIZE_OBJECT --></div></body></html>
+Command duration or timeout: 31.36 seconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'kristians-MacBook-Air.local', ip: '172.27.6.112', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.3', java.version: '1.8.0_40'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.usePerProcessProxy=false, ignoreZoomSetting=false, hasMetadata=true, handlesAlerts=true, version=10, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, webdriver.remote.sessionid=87ea3bec2e4b4861a5e3dfebfb3b24ec, ie.browserCommandLineSwitches=, requireWindowFocus=false, takesScreenshot=true, initialBrowserUrl=about:blank, browserName=internet explorer, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 87ea3bec2e4b4861a5e3dfebfb3b24ec
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at com.yourcompany.SampleSauceTest.loginTest(SampleSauceTest.java:170)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at com.saucelabs.junit.ConcurrentParameterized$SauceClassRunnerForParameters.access$300(ConcurrentParameterized.java:170)
+	at com.saucelabs.junit.ConcurrentParameterized$SauceClassRunnerForParameters$2.run(ConcurrentParameterized.java:287)
+	at com.saucelabs.junit.ConcurrentParameterized$NonBlockingAsynchronousRunner$1.call(ConcurrentParameterized.java:312)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+loginTest[3](com.yourcompany.SampleSauceTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>ERROR: The requested URL could not be retrieved</title><style type="text/css"><!--  Internal Error: Missing Template MGR_INDEXbody:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }:lang(he) { direction: rtl; } --></style><meta http-equiv="refresh" content="0; url=http://www.flyfi.com/global/errors/no-coverage.htm"/><style type="text/css"><!-- html body {font-size: 0pt; color: #ffffff; background: #ffffff;} hr { display: none; } #titles { background: #ffffff; color: #ffffff; } h1 { font-size: 0pt; color: #ffffff; } h2 { font-size: 0pt; color: #ffffff; } #footer { font-size: 0pt; color: #ffffff; } a { color: #ffffff; font-size: 0pt; } p { color: #ffffff; font-size: 0pt; } --></style></head><body id=ERR_ZERO_SIZE_OBJECT><div id="titles"><h1>ERROR</h1><h2>The requested URL could not be retrieved</h2></div><hr><div id="content"><p>The following error was encountered while trying to retrieve the URL: <a href="http://ondemand.saucelabs.com/wd/hub/session/aa0799bbc84845f89f8346656d176ad9/url">http://ondemand.saucelabs.com/wd/hub/session/aa0799bbc84845f89f8346656d176ad9/url</a></p><blockquote id="error"><p><b>Zero Sized Reply</b></p></blockquote><p>Squid did not receive any data for this request.</p><p>Your cache administrator is <a href="mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_ZERO_SIZE_OBJECT&amp;body=CacheHost%3A%203%0D%0AErrPage%3A%20ERR_ZERO_SIZE_OBJECT%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Tue,%2016%20Jun%202015%2022%3A52%3A02%20GMT%0D%0A%0D%0AClientIP%3A%20172.27.6.112%0D%0AServerIP%3A%20ondemand.saucelabs.com%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fwd%2Fhub%2Fsession%2Faa0799bbc84845f89f8346656d176ad9%2Furl%20HTTP%2F1.1%0AContent-Type%3A%20application%2Fjson%3B%20charset%3Dutf-8%0D%0AContent-Length%3A%2033%0D%0AHost%3A%20ondemand.saucelabs.com%3A80%0D%0AConnection%3A%20Keep-Alive%0D%0AUser-Agent%3A%20Apache-HttpClient%2F4.3.6%20(java%201.5)%0D%0AAccept-Encoding%3A%20gzip,deflate%0D%0A%0D%0A%0D%0A">webmaster</a>.</p><br></div><hr><div id="footer"><p>Generated Tue, 16 Jun 2015 22:52:02 GMT by 3 (squid)</p><!-- ERR_ZERO_SIZE_OBJECT --></div></body></html>
+Command duration or timeout: 31.21 seconds
+Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
+System info: host: 'kristians-MacBook-Air.local', ip: '172.27.6.112', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.3', java.version: '1.8.0_40'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, hasMetadata=true, databaseEnabled=true, handlesAlerts=true, version=36.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webdriver.remote.sessionid=aa0799bbc84845f89f8346656d176ad9, locationContextEnabled=true, webStorageEnabled=true, takesScreenshot=true, browserName=firefox, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: aa0799bbc84845f89f8346656d176ad9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at com.yourcompany.SampleSauceTest.loginTest(SampleSauceTest.java:170)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at com.saucelabs.junit.ConcurrentParameterized$SauceClassRunnerForParameters.access$300(ConcurrentParameterized.java:170)
+	at com.saucelabs.junit.ConcurrentParameterized$SauceClassRunnerForParameters$2.run(ConcurrentParameterized.java:287)
+	at com.saucelabs.junit.ConcurrentParameterized$NonBlockingAsynchronousRunner$1.call(ConcurrentParameterized.java:312)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
